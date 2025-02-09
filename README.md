@@ -10,7 +10,7 @@
 
 ## Overview
 
-This project is a FastAPI-based web scraper designed to extract product information (name, price, and image) from the [Dental Stall Shop](https://dentalstall.com/shop/). It supports optional settings such as limiting the number of pages to scrape and using a proxy for requests. The project uses an object-oriented approach with abstractions for storage and notifications, making it easy to extend or swap out components in the future.
+This project is a FastAPI-based web scraper designed to extract product information (name, price, and image) from the url. It supports optional settings such as limiting the number of pages to scrape and using a proxy for requests. The project uses an object-oriented approach with abstractions for storage and notifications, making it easy to extend or swap out components in the future.
 
 ## Features
 
