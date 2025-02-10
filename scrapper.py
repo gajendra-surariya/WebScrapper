@@ -33,7 +33,7 @@ class Scraper:
         product_elements = soup.select("ul.products li.product")   # elements of Product
         products: List[Product] = []
         for element in product_elements:
-            title_elem = element.select_one("span.title")  # element of title 
+            title_elem = element.select_one("h2.woo-loop-product__title")  # element of title 
             price_elem = element.select_one("span.price")  # element of price
             image_elem = element.select_one("img")   # image element
             if title_elem and price_elem and image_elem:
@@ -76,12 +76,12 @@ class Scraper:
 
     def scrape(self) -> List[Product]:
         products: List[Product] = []
-        page = 1
+        page = 2
         while True:
             if self.page_limit and page > self.page_limit:
                 break
 
-            url = f"https://testurl/{page}/"
+            url = f"https://dentalstall.com/shop/page/{page}/"
             print(f"Scraping {url}")
             html = self.fetch_page(url)
             if not html:
